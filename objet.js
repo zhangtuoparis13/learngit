@@ -39,4 +39,13 @@ alert('toString' in xiaoming); // true
 alert(xiaoming.hasOwnProperty('name')); //true
 alert(xiaoming.hasOwnProperty('toString')); // false
 
+xiaoming.age =20;
+if (xiaoming.age >= 18){
+    alert('adult');
+} else if (xiaoming.age >=6){
+    alert('teeanger');
+}else {
+    alert("He is just a kid");
+}
+
 //以上为 js 的对象部分的基本语法
