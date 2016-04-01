@@ -8,7 +8,7 @@
 'use strict';
 
 // 数组的用法
-// JavaScript的Array可以包含任意数据类型，并通过索引来访问每个元素。要取得Array的长度，直接访问length属性：
+/*// JavaScript的Array可以包含任意数据类型，并通过索引来访问每个元素。要取得Array的长度，直接访问length属性：
 var arr = [1, 2, 3.14, 'Hello', null, true];
 alert(arr.length);
 
@@ -19,7 +19,7 @@ alert(arr); // arr变为[1, 2, 3, undefined, undefined, undefined]
 arr.length =2;
 alert(arr); // arr变为[1, 2]
 
-/*Array可以通过索引把对应的元素修改为新的值，因此，对Array的索引进行赋值会直接修改这个Array : */
+/!*Array可以通过索引把对应的元素修改为新的值，因此，对Array的索引进行赋值会直接修改这个Array : *!/
 var arr = ['A', 'B', 'C'];
 arr[1] = 99;
 alert(arr); // arr现在变为['A', 99, 'C']
@@ -53,4 +53,38 @@ alert(arr.slice(3)); // 从索引3开始到结束: ['D', 'E', 'F', 'G']
 var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 var aCopy = arr.slice();
 alert(aCopy); // ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-alert(aCopy === arr); // false
+alert(aCopy === arr); // false*/
+
+//push和pop
+// push()向Array的末尾添加若干元素，pop()则把Array的最后一个元素删除掉：
+
+var arr = [1, 2];
+arr.push('A', 'B'); // 返回Array新的长度: 4
+alert(arr); // [1, 2, 'A', 'B']
+arr.pop(); // pop()返回'B'
+alert(arr); // [1, 2, 'A']
+arr.pop(); arr.pop(); arr.pop(); // 连续pop 3次
+alert(arr); // []
+arr.pop(); // 空数组继续pop不会报错，而是返回undefined
+alert(arr); // []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
