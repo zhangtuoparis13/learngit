@@ -202,8 +202,8 @@ PI; // 3.14*/
 // var y = o.square(7);
 // console.log(y);
 
-var a = [function(x) {return x*x;}, 20];
+// var a = [function(x) {return x*x;}, 20];
 
-console.log(a[0](a[1]));
-console.log(a[0]);
-console.log(a[1]);
+// console.log(a[0](a[1]));
+// console.log(a[0]);
+// console.log(a[1]);
