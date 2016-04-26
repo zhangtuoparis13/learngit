@@ -41,40 +41,41 @@
 
  上述两种定义完全等价，注意第二种方式按照完整语法需要在函数体末尾加一个;，表示赋值语句结束。
 * */
-var abs = function (x) {
-    if (x>=0){
-        var y = x;
-    } else {
-        y = -x;
-    }
-    return y;
 
-};
+// var abs = function (x) {
+//     if (x>=0){
+//         var y = x;
+//     } else {
+//         y = -x;
+//     }
+//     return y;
 
-console.log(abs(-11));
+// };
 
-// 由于JavaScript允许传入任意个参数而不影响调用，因此传入的参数比定义的参数多也没有问题，虽然函数内部并不需要这些参数：
+// console.log(abs(-11));
 
-abs(10, 'blablabla'); // 返回10
-abs(-9, 'haha', 'hehe', null); // 返回9
+// // 由于JavaScript允许传入任意个参数而不影响调用，因此传入的参数比定义的参数多也没有问题，虽然函数内部并不需要这些参数：
 
-// 传入的参数比定义的少也没有问题：
+// abs(10, 'blablabla'); // 返回10
+// abs(-9, 'haha', 'hehe', null); // 返回9
 
-abs(); // 返回NaN
-// 此时abs(x)函数的参数x将收到undefined，计算结果为NaN
+// // 传入的参数比定义的少也没有问题：
 
-// 要避免收到undefined，可以对参数进行检查：
+// abs(); // 返回NaN
+// // 此时abs(x)函数的参数x将收到undefined，计算结果为NaN
 
-function abs1(x) {
-    if (typeof x !== 'number') {
-        throw 'Not a number';
-    }
-    if (x >= 0) {
-        return x;
-    } else {
-        return -x;
-    }
-}
+// // 要避免收到undefined，可以对参数进行检查：
+
+// function abs1(x) {
+//     if (typeof x !== 'number') {
+//         throw 'Not a number';
+//     }
+//     if (x >= 0) {
+//         return x;
+//     } else {
+//         return -x;
+//     }
+// }
 
 /*
 全局作用域
@@ -152,3 +153,57 @@ ES6标准引入了新的关键字const来定义常量，const与let都具有块�
 const PI = 3.14;
 PI = 3; // 某些浏览器不报错，但是无效果！
 PI; // 3.14*/
+
+
+// var tensquared = 
+//     (function(x)
+    
+//     {
+//         return x*x
+//     }(10));
+    
+// console.log(tensquared);
+
+
+// function maxi(a,b,c)
+// {
+//     var max = Number.NEGATIVE_INFINITY;
+    
+//     for (var i = 0; i < arguments.length; i++){
+//         if (arguments[i]>max) max = arguments[i];
+//     }
+//         return max;
+// }
+
+// var largest = maxi(78,555,34, 4, 78, 99 ,1200, 6);
+
+// console.log(largest);
+
+// function square(x)
+// {
+//     return x*x;
+// }
+// console.log(square(10));
+
+// var s1 = square;
+// console.log(s1(12));
+
+// a = square(15);
+// b = s1(5);
+// console.log(a,b);
+
+// var o = {
+//     square : function(x)
+//     {
+//         return x*x;
+//     }
+// }
+
+// var y = o.square(7);
+// console.log(y);
+
+var a = [function(x) {return x*x;}, 20];
+
+console.log(a[0](a[1]));
+console.log(a[0]);
+console.log(a[1]);
