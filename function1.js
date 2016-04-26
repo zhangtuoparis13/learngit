@@ -51,7 +51,7 @@ var abs = function (x) {
 
 };
 
-alert(abs(-11));
+console.log(abs(-11));
 
 // 由于JavaScript允许传入任意个参数而不影响调用，因此传入的参数比定义的参数多也没有问题，虽然函数内部并不需要这些参数：
 
@@ -65,7 +65,7 @@ abs(); // 返回NaN
 
 // 要避免收到undefined，可以对参数进行检查：
 
-function abs(x) {
+function abs1(x) {
     if (typeof x !== 'number') {
         throw 'Not a number';
     }
